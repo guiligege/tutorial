@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!-- 对象别名 ，用在mapper里面代替整个对象的访问-->
+  <typeAliases>
+    <!--<typeAlias alias="weiXinHao" type="org.guili.ecshop.business.weixin.bean.WeiXinHao"/>-->
+  </typeAliases>
+  <mappers>
+    <!-- 数据库映射文件 -->
+    <!-- 微信抓取 -->
+    <mapper resource="org/xiaozhang/jingxuan/mapping/UserMapper.xml"/>
+
+  </mappers>
+</configuration>

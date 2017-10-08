@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite default-match-type="regex">
+
+    <!--<rule>
+        <note>微信文章详细页</note>
+        <from>^/weixin/detail-(.*)?\.htm$</from>
+        <to type="forward">/weixin/detail.htm?hash=$1</to>
+    </rule>
+    <outbound-rule>
+        <from>^/weixin/detail\.htm\?hash=(.*)</from>
+        <to last="true">/weixin/detail-$1.htm</to>
+    </outbound-rule>-->
+    
+    <!-- 教程详细页 -->
+    <rule>
+        <note>教程详细页</note>
+        <from>^/tutorial/detail-(.*)?-(.*)?\.htm$</from>
+        <to type="forward">/tutorial/detail.htm?cate_name=$1&amp;short_url=$2</to>
+    </rule>
+    <outbound-rule>
+        <from>^/tutorial/detail\.htm\?cate_name=(.*)&amp;short_url=(.*)</from>
+        <to last="true">/tutorial/detail-$1-$2.htm</to>
+    </outbound-rule>
+</urlrewrite>
