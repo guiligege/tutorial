@@ -96,21 +96,39 @@
 
         <div class="article-body">
 
-          <div class="article-intro" id="content">
-            <!--内容-->
-              <c:if test="${!empty tutorial}">
-                    ${tutorial.content}
-              </c:if>
-              <!--内容结束-->
-          </div>
+          <h3>版权信息</h3>
+
+          <hr />
+
+          <p>精选教程（www.51jingxuan.com）刊载的所有内容，包括文字、图片、音频、视频、软件、程序、以及网页版式设计等均在网上搜集。</p>
+          <p>精选教程提供的内容仅用于个人学习、研究或欣赏。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关</p>
+          <p>访问者可将本网站提供的内容或服务用于个人学习、研究或欣赏，以及其他非商业性或非盈利性用途，但同时应遵守著作权法及其他相关法律的规定，不得侵犯本网站及相关权利人的合法权利。</p>
+          <p>本网站内容原作者如不愿意在本网站刊登内容，请及时通知本站，予以删除。</p>
+
+          <p>本网站的编程技术内容来源有 <a href="http://www.w3schools.com/" target="_blank">W3Schools Online Web Tutorials</a> 、<a href="http://www.tutorialspoint.com/" target="_blank">Tutorialspoint</a>、<a href="https://developer.mozilla.org/zh-CN/" target="_blank">Mozilla 开发者网络</a>、网络、本站工作人员编写等。</p>
+          <h3>链接到精选教程</h3>
+
+          <hr />
+          <p>任何网站都可以链接到精选教程的任何页面。
+          <p>如果您需要在对少量内容进行引用，请务必在引用该内容的页面添加指向被引用页面的链接。</p>
+          <h3>保证</h3><hr />
+          <p>精选教程不提供任何形式的保证。所有与使用本站相关的直接风险均由用户承担。精选教程提供的所有代码均为实例，并不对性能、适用性、适销性或/及其他方面提供任何保证。</p>
+          <p>精选教程的内容可能包含不准确性或错误。精选教程不对本网站及其内容的准确性进行保证。如果您发现本站点及其内容包含错误，请联系我们以便这些错误得到及时的更正:xiaozhengdong3@163.com</p>
+
+          <h3>您的行为</h3>
+          <hr />
+          <p>当您使用本站点时，说明您已经同意并接受本页面的所有信息。</p>
+          <h3>联系方式</h3>
+          <hr />
+          <p>联系邮箱：xiaozhengdong3@163.com（相关事务请发函至该邮箱）</p>
         </div>
 
 
 
-      <div class="previous-next-links">
+      <!--<div class="previous-next-links">
         <div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:void(0);" rel="prev"> </a> </div>
         <div class="next-design-link"><a href="javascript:void(0);" rel="next"></a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
-      </div>
+      </div>-->
 
 
 

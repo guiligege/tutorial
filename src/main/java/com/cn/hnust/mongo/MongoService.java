@@ -200,6 +200,36 @@ public class MongoService {
         return docs;
     }
 
+
+    /**
+     *
+     * @param collectionName
+     * @return
+     */
+    public List<Document> findShortUrlByCateName(String cate_name, String collectionName) {
+        Preconditions.checkArgument(MongoUtils.checkCollName(collectionName), "collection name not exist in mongo");
+
+        final List<Document> docs = Lists.newLinkedList();
+        Bson bson = null;
+
+        if (StringUtils.isNotEmpty(cate_name)) {
+            bson = and(eq(CATE_NAME, cate_name));
+        }
+
+        FindIterable<Document> iterable = MongoUtils.getCollection(collectionName).find(bson)
+                .projection(Projections.exclude("_id"))
+                .projection(Projections.include("short_url"))
+                ;
+        iterable.forEach(new Block<Document>() {
+            @Override
+            public void apply(final Document document) {
+                docs.add(document);
+            }
+        });
+
+        return docs;
+    }
+
     /**
      *
      * @param collectionName

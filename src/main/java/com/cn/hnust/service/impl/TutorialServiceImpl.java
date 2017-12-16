@@ -127,6 +127,24 @@ public class TutorialServiceImpl implements ITutorialService {
         return tutorialList.get(0);
     }
 
+    @Override
+    public List<Tutorial> selectByCate(String cateName) {
+        if(StringUtils.isEmpty(cateName)){
+            return Collections.EMPTY_LIST;
+        }
+
+        //获取文档
+        List<Document> docs = mongoService.findShortUrlByCateName(cateName,TUTORIAL_TABLE);
+
+        if(CollectionUtils.isEmpty(docs)){
+            return Collections.EMPTY_LIST;
+        }
+
+        List<Tutorial> tutorialList = this.getOrderedList(docs);
+
+        return tutorialList;
+    }
+
     /**
      * 获取排序的教程列表
      * @param docs

@@ -40,6 +40,7 @@
 		<url-pattern>*.json</url-pattern>
 		<url-pattern>*.swf</url-pattern>
 		<url-pattern>*.xml</url-pattern>
+		<url-pattern>*.html</url-pattern>
 		<url-pattern>*.txt</url-pattern>
 		<url-pattern>*.ico</url-pattern>
 	</servlet-mapping>

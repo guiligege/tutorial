@@ -23,9 +23,10 @@ public final class DomainConstans{
 //	mongodb.weixinhao.collectionName=weixinhao_info
 	
 //	public static ResourceBundle	mongodb			= ResourceBundle.getBundle("config/mongodb");
-	public static final String mongodb_host="192.168.1.101";
+	//public static final String mongodb_host="47.92.129.120";
+	public static final String mongodb_host="127.0.0.1";
 	public static final Integer mongodb_port=27017;
-	public static final String mongodb_userName="root";
+	public static final String mongodb_userName="root2";
 	public static final String mongodb_password="root1234";
 	public static final String mongodb_databaseName="product";
 	public static final String mongodb_total_colls="tutorial|category";
@@ -34,5 +35,11 @@ public final class DomainConstans{
 	public static final String mongodb_category_collectionName="category";
 
 	public static final Integer		LOG_BATCH_SIZE		= 1;
+
+	//test
+//	public static String IMAGE_PATH = "/Users/zhengdongxiao/jingxuan_resource/images/detail_images/";
+	//product
+	public static String IMAGE_PATH = "/usr/local/jingxuan_resource/detail_images/";
+	public static String IMAGE_URL = "http://www.51jingxuan.com/detail_images/";
 
 }

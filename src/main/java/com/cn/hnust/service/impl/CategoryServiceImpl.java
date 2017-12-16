@@ -7,6 +7,7 @@ import com.cn.hnust.domain.CategoryDO;
 import com.cn.hnust.mongo.DomainConstans;
 import com.cn.hnust.mongo.MongoService;
 import com.cn.hnust.service.ICategoryService;
+import com.cn.hnust.utils.ShortUrlUtil;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.bson.Document;
@@ -24,12 +25,21 @@ import java.util.List;
 @Service("categoryService")
 public class CategoryServiceImpl implements ICategoryService {
 
+    private static final String CATEGORY_TABLE = DomainConstans.mongodb_category_collectionName;
+
     @Autowired
     private MongoService mongoService;
 
     @Override
-    public int addCategory(Category tutorial) {
-        return 0;
+    public int addCategory(Category category) {
+
+        //对象转json
+        String jsonString= JSON.toJSONString(category);
+
+        //存mongo
+        mongoService.insertMany(jsonString, CATEGORY_TABLE);
+
+        return 1;
     }
 
     @Override
@@ -37,7 +47,7 @@ public class CategoryServiceImpl implements ICategoryService {
 
         List<Category> categoryList = Lists.newArrayList();
 
-        List<Document>  docs = mongoService.getAllCategory(DomainConstans.mongodb_category_collectionName);
+        List<Document>  docs = mongoService.getAllCategory(CATEGORY_TABLE);
 
         if(CollectionUtils.isEmpty(docs)){
             return categoryList;

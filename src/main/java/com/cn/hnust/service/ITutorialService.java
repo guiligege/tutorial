@@ -20,4 +20,7 @@ public interface ITutorialService {
 	public TutorialDO selectByCateIdAndShortUrl(String cateName, String short_url) ;
 
 	public Tutorial getCurrentTutorial(String short_url);
+
+	//查询类目id，对应的教程列表
+	public  List<Tutorial>  selectByCate(String cateName) ;
 }

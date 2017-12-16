@@ -78,6 +78,7 @@
     </body>
 
     <script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script charset="utf-8" src="js/kind_editer/auto.js"></script>
     <script charset="utf-8" src="js/kind_editer/kindeditor-all.js"></script>
     <script charset="utf-8" src="js/kind_editer/lang/zh-CN.js"></script>
     <script>
@@ -85,9 +86,23 @@
         // 关闭过滤模式，保留所有标签
         KindEditor.options.filterMode = false;
         var kindEditor;
+
+        //var editor;
         KindEditor.ready(function(K) {
-            kindEditor = K.create('#editor_id');
+            kindEditor = K.create('#editor_id', {
+                resizeType : 1,
+                allowPreviewEmoticons : false,
+                allowImageUpload : false,
+                items : [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            });
         });
+
+        //KindEditor.ready(function(K) {
+        //    kindEditor = K.create('#editor_id');
+        //});
 
         //测试 html
         /*function save(){
